@@ -242,7 +242,9 @@ export default {
   align-items: flex-start;
   background: var(--bg);
 }
-
+.rubberhose-animation {
+  margin-bottom: -6px;
+}
 .home-content {
   width: 800px;
 }
