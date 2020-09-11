@@ -1,7 +1,11 @@
 <template>
   <div class="main-content">
     <div class="home-content">
-      <Rubberhose :controllers="controllerArray" :animation-data="animation" />
+      <Rubberhose 
+        :controllers="controllerArray" 
+        :locked="['Hose 1::Hip, Hose 2::Hip']"
+        :dragggable="[{layer: 'Body'}]"
+        :animation-data="animation" />
       <div class="controls">
         <div class="header">
           <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,12 +96,12 @@
 </template>
 
 <script>
-import "vue-slider-component/theme/default.css";
+// import "vue-slider-component/theme/default.css";
 import slider from "vue-slider-component";
 export default {
   data: () => ({
     rubberhoses: [],
-    animation: require("@/assets/homeExample.json"),
+    animation: require("@/assets/walk.json"),
     controls: {
       autoRotateStart: {
         layer: "control",
@@ -113,7 +117,7 @@ export default {
         layer: "control",
         name: "hoseLength",
         realname: "Hose Length",
-        value: 700,
+        value: 370,
         options: {
           dotSize: 14,
           width: "100%",
@@ -132,7 +136,7 @@ export default {
         layer: "control",
         name: "bendRadius",
         realname: "Bend Radius",
-        value: 100,
+        value: 60,
         options: {
           dotSize: 14,
           width: "100%",
