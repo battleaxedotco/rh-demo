@@ -90,6 +90,9 @@
             size="15px"
           />
         </div>
+        <br>
+        <Button 
+          class="reset" label="Reset rig" @click="reset" />
       </div>
     </div>
   </div>
@@ -219,6 +222,9 @@ export default {
     assignRubberhoses(val) {
       console.log(val);
     },
+    reset() {
+      location.reload()
+    },
   },
 };
 </script>
@@ -243,6 +249,11 @@ export default {
 
 .anim-main {
   fill: var(--color-default);
+}
+.reset {
+  font-size: 13px;
+  border: 1px solid #555 !important;
+  margin: 0 12px;
 }
 
 .controls {
