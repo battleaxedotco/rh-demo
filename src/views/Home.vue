@@ -4,7 +4,7 @@
       <Rubberhose 
         :controllers="controllerArray" 
         :locked="['Hose 1::Hip, Hose 2::Hip']"
-        :dragggable="[{layer: 'Body'}]"
+        :draggable="['Body']"
         :animation-data="animation" />
       <div class="controls">
         <div class="header">
